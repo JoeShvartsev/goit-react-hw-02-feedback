@@ -3,6 +3,7 @@ import { Section } from './Section/Section.jsx';
 import {FeedbackOptions} from './FeedbackOptions/FeedbackOptions'
 import { Statistics} from './Statistics/Statistics'
 import {Notification} from './Notification/Notification'
+import PropTypes from 'prop-types';
 
 export class App extends Component {
   state = {
@@ -36,3 +37,9 @@ export class App extends Component {
     );
   }
 }
+App.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired
+};
+
